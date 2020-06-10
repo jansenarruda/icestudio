@@ -1418,7 +1418,8 @@ angular
                 (collection.blocks || collection.examples)
               ) {
                 alertify.prompt(
-                  gettextCatalog.getString('Edit the collection name'),
+                  gettextCatalog.getString('Add collection'),
+                  gettextCatalog.getString('Enter name for the collection:'),
                   collection.origName,
                   function (evt, name) {
                     if (!name) {
@@ -1476,7 +1477,8 @@ angular
                       );
                       next(name);
                     }
-                  }
+                  },
+                  function () {}
                 );
               } else {
                 alertify.warning(
