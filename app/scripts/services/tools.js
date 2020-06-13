@@ -1487,12 +1487,8 @@ angular
               }
             }, 0);
           },
-          function (name) {
+          function () {
             collections.loadInternalCollections();
-            // If the selected collection is replaced, load it again
-            if (common.selectedCollection.name === name) {
-              collections.selectCollection(name);
-            }
             utils.rootScopeSafeApply();
             nextzip();
           }
